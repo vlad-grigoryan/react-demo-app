@@ -1,0 +1,22 @@
+.post {
+  display: flex;
+  justify-content: center;
+  .blogContentWrapper {
+    width: 100%;
+    margin: 0 1rem;
+    .card {
+      -webkit-box-shadow: 10px 10px 5px -8px rgba(0,0,0,0.75);
+      -moz-box-shadow: 10px 10px 5px -8px rgba(0,0,0,0.75);
+      box-shadow: 10px 10px 5px -8px rgba(0,0,0,0.75);
+      .comment-wrapper {
+        margin: 1rem;
+        width: 90%;
+        background-color: #D3D3D3;
+      }
+    }
+  }
+}
+
+.lg-p-top {
+  padding: 20px;
+}
