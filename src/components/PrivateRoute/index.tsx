@@ -2,11 +2,8 @@ import React from 'react'
 import './styles.scss';
 import {Route, Redirect, RouteProps} from 'react-router-dom'
 import {connect} from 'react-redux'
-import Button from '@material-ui/core/Button';
-import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar';
 import {logoutUser} from '../../redux/actions/auth.actions';
-import Typography from "@material-ui/core/Typography";
+import Header from "../Header";
 
 
 interface MyRouteProps extends RouteProps {
@@ -24,16 +21,7 @@ const PrivateRoute: React.FC<MyRouteProps> = ({component: Component, authenticat
             <>
                 {authenticated &&
                 <>
-                    <AppBar position="static" color='transparent'>
-                        <Toolbar>
-                            <Typography variant="h5" paragraph>
-                                Demo App
-                            </Typography>
-                            <div className='sign-out-button'>
-                                <Button color="secondary" variant="outlined" onClick={signOut}>Sign out</Button>
-                            </div>
-                        </Toolbar>
-                    </AppBar>
+                    <Header signOut={signOut} />
                     <Component {...props} >
                     </Component>
                 </>
